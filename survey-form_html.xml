@@ -1,0 +1,50 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Please fill out this form with the required information</p>
+    <form id="survey-form" method="post" action='https://register-demo.freecodecamp.org'>
+      <fieldset>
+        <label id="name-label">Enter Your Name: <input placeholder="name" value="name" id="name" name="name" type="text" required /></label>
+        <label id="email-label">Enter Your Email: <input placeholder="email@.com" id="email" name="email" type="email" required /></label>
+        <label id="number-label">Enter Number: <input placeholder="1234" id="number" name="number" required type="number" min="0" max="120" /></label>
+      </fieldset>
+      <fieldset>
+        <legend>Account type (required)</legend>
+        <label for="personal-account"><input id="personal-account" type="radio" value= "personal-account" name="account-type" class="inline" checked /> Personal</label>
+        <label for="business-account"><input id="business-account" value="business-account" type="radio" name="account-type" class="inline" /> Business</label>
+      </fieldset>
+      <fieldset>
+        <label for="profile-picture">Upload a profile picture: <input id="profile-picture" type="file" name="file" /></label>
+        <label for="age">Input your age (years): <input id="age" type="number" name="age" min="13" max="120" /></label>
+        <label for="referrer">How did you hear about us?
+          <select id="dropdown" name="dropdown">
+            <option value="">(select one)</option>
+            <option value="1">freeCodeCamp News</option>
+            <option value="2">freeCodeCamp YouTube Channel</option>
+            <option value="3">freeCodeCamp Forum</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+        <label for="bio">Provide a bio:
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+        </label>
+      </fieldset>
+      <label for="terms">
+        <input id="terms" type="checkbox" required value="terms" name="terms" /><a value="terms">terms</a>
+      </label>
+      <label for="conditions">
+        <input value="condtions" id="conditions" type="checkbox" checked required name="conditions" /><a value="conditions">conditions</a>
+      </label>
+      <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor"> Indoor</label>
+            <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
